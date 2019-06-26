@@ -34,7 +34,7 @@ services:
       - db_data:/var/lib/postgresql/data
 volumes:
   db_data:
-    driver: backer:latest
+    driver: srgl/backer
     driver_opts:
       size: 2G
       backup_schedule: "0 1 * * *"

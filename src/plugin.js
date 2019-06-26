@@ -258,6 +258,9 @@ module.exports = class Plugin {
   }
 
   async forget (volume) {
+    if (!Object.keys(volume.mounts).length ||
+      !(await utils.isMounted(volume.mountpoint))) return
+
     console.log(`Forgetting snapshots of volume ${volume.name}...`)
     await utils.forget(volume.name, volume.forgetPolicy, volume.env)
     console.log(`Finished forgetting snapshots of ${volume.name}...`)

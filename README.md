@@ -36,9 +36,9 @@ volumes:
   db_data:
     driver: srgl/backer
     driver_opts:
-      size: 2G
+      size: "2G"
       backup_schedule: "0 1 * * *"
-      restore: y
+      restore: "y"
       forget_policy: "l7 w30"
       forget_schedule: "0 1 * * 7"
       env_restic_repository: s3:s3.amazonaws.com/bucket/db_backups

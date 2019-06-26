@@ -1,5 +1,5 @@
 {
-  "description": "Backer volume plugin for Docker",
+  "description": "Backer volume plugin",
   "documentation": "https://github.com/srgl/backer",
   "workdir": "/app",
   "entrypoint": ["npm", "start"],

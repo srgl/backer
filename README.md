@@ -6,7 +6,8 @@ Backer is a backup and persisting solution for docker volumes built on top of th
 
 ### Installation
 ```
-docker plugin install --timeout 120 srgl/backer:latest
+docker plugin install --disable srgl/backer
+docker plugin enable --timeout 120 srgl/backer
 ```
 
 ### Plugin options

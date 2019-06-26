@@ -1,15 +1,20 @@
 {
   "name": "backer",
   "version": "0.0.1",
-  "description": "",
+  "description": "Backer volume plugin",
   "main": "src",
   "scripts": {
     "start": "node src",
-    "build": "./build.sh",
+    "build": "make build",
+    "push": "make push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "srgl",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/srgl/backer"
+  },
   "dependencies": {
     "async-lock": "^1.2.0",
     "cron": "^1.7.1",

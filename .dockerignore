@@ -3,9 +3,7 @@ Dockerfile
 docker-compose*
 README*
 LICENSE
+Makefile
 .gitignore
 .dockerignore
-.env
 plugin
-build.sh
-test

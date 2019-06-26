@@ -204,14 +204,12 @@ module.exports = class Plugin {
       await this.lock.acquire(volume.name, async () => {
         await this.backup(volume)
       })
-    })
+    }, null, true)
     volume.forgetJob = new CronJob(volume.forgetSchedule, async () => {
       await this.lock.acquire(volume.name, async () => {
         await this.forget(volume)
       })
-    })
-    volume.backupJob.start()
-    volume.forgetJob.start()
+    }, null, true)
   }
 
   unschedule (volume) {

@@ -20,7 +20,7 @@ Should the volume be restored from the last snapshot before mount, y/n, default 
 ###### forget_policy
 Snapshots forget policy, translates to `--keep-*` arguments for `restic forget`, default `l10 h24 d7 w52 m120 y100`
 ###### forget_schedule
-Snapshots forget schedule, cron format, default `0 1 * * 7`
+Snapshots forget schedule, cron format, default `0 1 * * 0`
 ###### env_*
 Every option with the `env_` prefix will be passed to the restic as an environment variable
 
@@ -40,7 +40,7 @@ volumes:
       backup_schedule: "0 1 * * *"
       restore: "y"
       forget_policy: "l7 w30"
-      forget_schedule: "0 1 * * 7"
+      forget_schedule: "0 1 * * 0"
       env_restic_repository: s3:s3.amazonaws.com/bucket/db_backups
       env_restic_password: $BACKUPS_PASSWORD
       env_aws_access_key_id: $AWS_ACCESS_KEY_ID

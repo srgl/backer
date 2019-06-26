@@ -1,0 +1,19 @@
+{
+  "name": "backer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "start": "node src",
+    "build": "./build.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-lock": "^1.2.0",
+    "cron": "^1.7.1",
+    "execa": "^2.0.0"
+  },
+  "devDependencies": {}
+}

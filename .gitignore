@@ -1,0 +1,4 @@
+node_modules
+.env
+plugin
+docker-compose*

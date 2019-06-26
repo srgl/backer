@@ -1,0 +1,34 @@
+{
+  "description": "Backer volume plugin for Docker",
+  "documentation": "https://github.com/srgl/backer",
+  "workdir": "/app",
+  "entrypoint": ["npm", "start"],
+  "interface": {
+    "socket": "backer.sock",
+    "types": [ "docker.volumedriver/1.0" ]
+  },
+  "propagatedMount": "/mnt/volumes",
+  "network": {
+    "type": "host"
+  },
+  "linux": {
+    "allowAllDevices": true,
+    "capabilities": [
+      "CAP_SYS_ADMIN"
+    ]
+  },
+  "mounts": [
+    {
+      "destination": "/dev",
+      "options": ["bind"],
+      "source": "/dev",
+      "type": "bind"
+    },
+    {
+      "destination": "/mnt/shared",
+      "options": ["rbind"],
+      "source": "/var/lib/docker/plugins",
+      "type": "bind"
+    }
+  ]
+}

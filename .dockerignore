@@ -1,0 +1,11 @@
+node_modules
+Dockerfile
+docker-compose*
+README*
+LICENSE
+.gitignore
+.dockerignore
+.env
+plugin
+build.sh
+test

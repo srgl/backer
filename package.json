@@ -18,7 +18,7 @@
   "dependencies": {
     "async-lock": "^1.2.0",
     "cron": "^1.7.1",
-    "execa": "^2.0.0"
+    "execa": "^2.1.0"
   },
   "devDependencies": {}
 }
